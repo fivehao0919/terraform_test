@@ -3,7 +3,8 @@ provider "aws" {
 }
 
 module "webserver_cluster" {
-  source  = "../../../modules/services/webserver-cluster"
+  #source  = "../../../modules/services/webserver-cluster"
+  source  = "github.com/fivehao0919/terraform_test//ch4/module-example/modules/services/webserver-cluster?ref=v0.0.1"
 
   cluster_name           = "webservers-stage"
   db_remote_state_bucket = "fivehao-terraform-up-and-running-state"
